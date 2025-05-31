@@ -2,7 +2,7 @@ const age=document.querySelector("#age");
 const name=document.querySelector("#name");
 const btn=document.querySelector("#btn");
 
-btn.addEventListener(click,()=>{
+btn.addEventListener("click",()=>{
 
 	const ageValue = parseInt(age.value);
     const nameValue = name.value.trim();
