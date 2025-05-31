@@ -12,15 +12,15 @@ btn.addEventListener("click",()=>{
 	}
 	else{
 	    new Promise((resolve,reject)=>{
-		if(age>=18){
+		if(ageValue>=18){
 			setTimeout(()=>{
-				resolve(`Welcome, {name}. You can vote.`)
+				resolve(`Welcome, ${name}. You can vote.`)
 			},4000)
 			
 		}
 		else{
 			setTimeout(()=>{
-				reject(`Oh sorry {name}. You aren't old enough.`)
+				reject(`Oh sorry ${name}. You aren't old enough.`)
 			},4000)
 			
 		}
