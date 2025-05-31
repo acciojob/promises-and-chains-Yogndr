@@ -7,22 +7,30 @@ btn.addEventListener(click,()=>{
 		alert("Please enter valid details");
 	}
 	else{
-	return new Promise((resolve,reject)=>{
+	    new Promise((resolve,reject)=>{
 		if(age>=18){
 			setTimeout(()=>{
-				resolve(alert(`Welcome, {name}. You can vote.`))
+				resolve(`Welcome, {name}. You can vote.`)
 			},4000)
 			
 		}
 		else{
 			setTimeout(()=>{
-				reject(alert(`Oh sorry {name}. You aren't old enough.`))
+				reject(`Oh sorry {name}. You aren't old enough.`)
 			},4000)
 			
 		}
 		
 		
-	})
+	}).
+       then((msg)=>{
+		   alert(msg)
+	   }).
+			catch((error)=>{
+				alert(error)
+			})
+			
+			}
 })
 	
-}
+
