@@ -48,7 +48,7 @@ btn.addEventListener("click", () => {
   const nameValue = name.value.trim();
 
   // Input Validation
-  if (!nameValue || isNaN(ageValue)) {
+  if (!nameValue || !ageValue) {
     alert("Please enter valid details");
     return;
   }
