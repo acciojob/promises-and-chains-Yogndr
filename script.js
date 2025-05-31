@@ -3,8 +3,12 @@ const name=document.querySelector("#name");
 const btn=document.querySelector("#btn");
 
 btn.addEventListener(click,()=>{
-	if(!age || !name){
+
+	const ageValue = parseInt(age.value);
+    const nameValue = name.value.trim();
+	if(!ageValue || !nameValue){
 		alert("Please enter valid details");
+		return;
 	}
 	else{
 	    new Promise((resolve,reject)=>{
